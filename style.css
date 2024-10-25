@@ -1,0 +1,88 @@
+#calculator {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(6, 1fr);    /* 5 equal rows */
+    max-width: 500px;
+    border: 1px solid black;
+    margin: 10px;
+  }
+  
+  .number {
+    margin: 1px;
+    background-color: beige;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px; /* Vertically center the text */
+  }
+  
+  .number:hover {
+    background-color: rgba(245, 245, 220, 0.541);
+    cursor: pointer;
+  }
+  
+  .number:active {
+    background-color: blue;
+  }
+  
+  #result {
+    grid-column: span 3; /* Span across all columns */
+    height: 50px;
+    background-color: lightgray;
+  }
+  
+  #top-row, #middle-row, #bottom-row, #math-row, #additional-row {
+    display: contents; /* Allow the child items to be placed directly in the grid */
+  }
+  
+  /* Placing the buttons in their appropriate grid rows */
+  #top-row .number {
+    grid-row: 2;
+  }
+  
+  #middle-row .number {
+    grid-row: 3;
+  }
+  
+  #bottom-row .number {
+    grid-row: 4;
+  }
+  
+  #math-row .number {
+    grid-row: 5;
+  }
+
+  #additonal-row .number {
+    grid-row: 6
+  }
+  
+  /* Optional: Align the math buttons in the columns */
+  #plus {
+    grid-column: 1; /* First column */
+  }
+  
+  #minus {
+    grid-column: 2; /* Second column */
+  }
+  
+  #equals {
+    grid-column: 3; /* Third column */
+  }
+  
+  #multiply {
+    grid-column: 1; /* First column */
+  }
+  
+  #divide {
+    grid-column: 2; /* Second column */
+  }
+  
+  #reset {
+    grid-column: 3; /* Third column */
+  }
+  
+  #math {
+    float: right;
+    padding-right: 10px;
+  }
